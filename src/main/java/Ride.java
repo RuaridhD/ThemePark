@@ -1,4 +1,4 @@
-public abstract class Ride {
+public abstract class Ride implements Booth {
 
     private String name;
     private int price;
