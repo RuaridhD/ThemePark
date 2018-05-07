@@ -1,6 +1,4 @@
 public interface Booth {
-//
-//    public String sellTicket(String response);
-//
-//
+
+    public void checkIn(Customer customer);
 }

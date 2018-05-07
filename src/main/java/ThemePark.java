@@ -13,4 +13,9 @@ public class ThemePark {
     public int getRollercoastersInThemePark() {
         return rollercoasters.size();
     }
+
+    public void addRollerCoasterToPark(Rollercoaster rollercoaster){
+        rollercoasters.add(rollercoaster);
+    }
+
 }

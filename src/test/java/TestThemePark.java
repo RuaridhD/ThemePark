@@ -15,8 +15,8 @@ public class TestThemePark {
     @Before
     public void before() {
         themePark = new ThemePark();
-        rollercoaster = new Rollercoaster("Infinity", 5, 140);
-        dodgems = new Dodgems("Destruction Derby", 2, 120);
+        rollercoaster = new Rollercoaster("Infinity", 5, 140, 5);
+        dodgems = new Dodgems("Destruction Derby", 2, 120, 2);
         customer1 = new Customer(30, 150, 100);
         customer2 = new Customer(10, 120, 3);
     }
@@ -57,5 +57,16 @@ public class TestThemePark {
         assertEquals(0, themePark.getRollercoastersInThemePark());
     }
 
+    @Test
+    public void addRollerCoasterToPark(){
+        themePark.addRollerCoasterToPark(rollercoaster);
+        assertEquals(1, themePark.getRollercoastersInThemePark());
+    }
+
+    @Test
+    public void addCustomerToRollercoaster(){
+        themePark.addRollerCoasterToPark(rollercoaster);
+
+    }
 
 }
