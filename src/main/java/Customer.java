@@ -1,4 +1,4 @@
-public class Customer implements Booth{
+public class Customer {
 
     private int age;
     private int height;
@@ -22,8 +22,4 @@ public class Customer implements Booth{
         return money;
     }
 
-//    @Override
-//    public String sellTicket(String response) {
-//        return null;
-//    }
 }

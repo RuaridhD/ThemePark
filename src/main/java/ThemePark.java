@@ -5,7 +5,7 @@ public class ThemePark {
     private ArrayList<Rollercoaster> rollercoasters;
     private ArrayList<Dodgems> dodgemslist;
 
-    public ThemePark(){
+    public ThemePark() {
         this.rollercoasters = new ArrayList<>();
         this.dodgemslist = new ArrayList<>();
     }
@@ -14,8 +14,13 @@ public class ThemePark {
         return rollercoasters.size();
     }
 
-    public void addRollerCoasterToPark(Rollercoaster rollercoaster){
+    public void addRollerCoasterToPark(Rollercoaster rollercoaster) {
         rollercoasters.add(rollercoaster);
     }
 
+    public void addCustomerToRollercoaster(Customer customer, Rollercoaster rollercoaster) {
+        if (customer.getHeight() >= rollercoaster.getMinHeight() && customer.getMoney() >= rollercoaster.getPrice()) {
+            rollercoaster.checkIn(customer);
+        }
+    }
 }

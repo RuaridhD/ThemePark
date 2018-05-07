@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class TestThemePark {
@@ -19,6 +21,8 @@ public class TestThemePark {
         dodgems = new Dodgems("Destruction Derby", 2, 120, 2);
         customer1 = new Customer(30, 150, 100);
         customer2 = new Customer(10, 120, 3);
+        ArrayList<Rollercoaster> rollercoasters = new ArrayList<>();
+        rollercoasters.add(rollercoaster);
     }
 
     @Test
@@ -64,9 +68,11 @@ public class TestThemePark {
     }
 
     @Test
-    public void addCustomerToRollercoaster(){
-        themePark.addRollerCoasterToPark(rollercoaster);
-
+    public void testAddCustomerToRollercoaster(){
+        themePark.addCustomerToRollercoaster(customer1, rollercoaster);
+        assertEquals(1, rollercoaster.getCustomerCount());
     }
+
+
 
 }

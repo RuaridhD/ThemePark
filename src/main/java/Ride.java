@@ -28,6 +28,9 @@ public abstract class Ride implements Booth {
     public int getMinHeight() {
         return minHeight;
     }
+    public int getCustomerCount(){
+        return this.customers.size();
+    }
 
     public int getCapacity() {
         return capacity;
