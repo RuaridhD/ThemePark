@@ -2,7 +2,7 @@ public class Customer {
 
     private int age;
     private int height;
-    private int money;
+    public int money;
 
     public Customer(int age, int height, int money) {
         this.age = age;
